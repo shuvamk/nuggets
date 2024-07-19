@@ -1,6 +1,15 @@
+"use client";
 import Image from "next/image";
+import * as FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
 
 export default function Home() {
+  const fpPromise = FingerprintJS.load({ apiKey: "hfuZfUt7phkNUohhhMC1" });
+
+  // Analyze the visitor when necessary.
+  fpPromise
+    .then((fp) => fp.get())
+    .then((result) => console.log(result.requestId, result.visitorId));
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
