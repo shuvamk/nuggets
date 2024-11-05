@@ -6,12 +6,27 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "selector",
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {},
+      colors: {
+        primary: {
+          DEFAULT: "#ede7de",
+          text: "#254441",
+        },
+        backdrop: {
+          DEFAULT: "#f4f3f0cc",
+        },
+        mint: {
+          DEFAULT: "#a3dcd4",
+        },
+        rust: {
+          DEFAULT: "#e8b89c",
+        },
+      },
+      transitionTimingFunction: {
+        bounce: "cubic-bezier(.175,.885,.32,1.275)",
       },
     },
   },
